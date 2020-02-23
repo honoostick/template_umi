@@ -1,0 +1,58 @@
+.flexClomn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  height: 100%;
+
+  &>* {
+    flex: 1;
+    flex-basis: 1;
+    flex-shrink: 0;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  :global {
+    .ant-divider {
+      flex: none;
+      flex-shrink: 0;
+      width: 1px;
+    }
+  }
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  height: 100%;
+
+  &>* {
+    flex: 1;
+    flex-basis: 1;
+    flex-shrink: 0;
+    width: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  :global {
+    .ant-divider {
+      flex: none;
+      flex-shrink: 1;
+    }
+  }
+}
+
+.fix {
+  margin-top: 3px !important;
+}

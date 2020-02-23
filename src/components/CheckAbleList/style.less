@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: 0 0 5px 1px white;
+    content: "";
+  }
+
+  &.atLeft {
+    &::before {
+      display: none;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 0 5px 1px white;
+    content: "";
+  }
+
+  &.atRight {
+    &::after {
+      display: none;
+    }
+  }
+
+  .CheckAbleList {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    // position: absolute;
+    // height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .diliver {
+      display: inline-block;
+      width: 1px;
+      height: 16px;
+      background-color: #D1D1D1;
+    }
+
+    .item {
+      display: inline-block;
+      cursor: pointer;
+
+      &.checked {
+        text-align: center;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
